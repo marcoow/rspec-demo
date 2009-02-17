@@ -1,6 +1,8 @@
 one:
+  id:       1
   title:    task1
   finished: false
 two:
+  id:       2
   title:    task2
-  finished: false
+  finished: true
