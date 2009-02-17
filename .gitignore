@@ -1,2 +1,4 @@
 .DS_Store
 log
+db/test.sqlite3
+db/development.sqlite3
