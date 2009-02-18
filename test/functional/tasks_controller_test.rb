@@ -8,8 +8,16 @@ class TasksControllerTest < ActionController::TestCase
   # GET /tasks
   #
 
-  test 'TasksController GET /tasks is routed correctly' do
+  test "{ :controller => 'tasks', :action => 'index' } is routed correctly" do
     assert_routing '/tasks', { :controller => 'tasks', :action => 'index' }
+  end
+
+  test "GET 'tasks' is recognized correctly" do
+    assert_recognizes({ :controller => 'tasks', :action => 'index' }, { :path => 'tasks' })
+  end
+
+  test "tasks_path generates '/tasks'" do
+    assert_equal '/tasks', tasks_path
   end
 
   test 'TasksController handling GET /tasks is a success' do
@@ -52,8 +60,16 @@ class TasksControllerTest < ActionController::TestCase
   # GET /tasks/:id
   #
 
-  test 'TasksController GET /tasks/:id is routed correctly' do
+  test "{ :controller => 'tasks', :action => 'index', :id => '1' } is routed correctly" do
     assert_routing '/tasks/1', { :controller => 'tasks', :action => 'show', :id => '1' }
+  end
+
+  test "GET 'tasks/1' is recognized correctly" do
+    assert_recognizes({ :controller => 'tasks', :action => 'show', :id => '1' }, { :path => 'tasks/1' })
+  end
+
+  test "task_path(1) generates '/tasks/1'" do
+    assert_equal '/tasks/1', task_path(1)
   end
 
   test 'TasksController handling GET /tasks/:id is a success' do
@@ -96,8 +112,16 @@ class TasksControllerTest < ActionController::TestCase
   # GET /tasks/new
   #
 
-  test 'TasksController GET /tasks/new is routed correctly' do
+  test "{ :controller => 'tasks', :action => 'new' } is routed correctly" do
     assert_routing '/tasks/new', { :controller => 'tasks', :action => 'new' }
+  end
+
+  test "GET 'tasks/new' is recognized correctly" do
+    assert_recognizes({ :controller => 'tasks', :action => 'new' }, { :path => 'tasks/new' })
+  end
+
+  test "new_task_path generates '/tasks/new'" do
+    assert_equal '/tasks/new', new_task_path
   end
 
   test 'TasksController handling GET /tasks/new is a success' do
@@ -139,8 +163,12 @@ class TasksControllerTest < ActionController::TestCase
   # POST /tasks
   #
 
-  test 'TasksController POST /tasks is routed correctly' do
-    assert_routing({ :method => 'post', :path => '/tasks' }, { :controller => 'tasks', :action => 'create' })
+  test "{ :controller => 'tasks', :action => 'create' } is routed correctly" do
+    assert_routing({ :path => '/tasks', :method => 'post' }, { :controller => 'tasks', :action => 'create' })
+  end
+
+  test "POST 'tasks' is recognized correctly" do
+    assert_recognizes({ :controller => 'tasks', :action => 'create' }, { :path => 'tasks', :method => 'post' })
   end
 
   test 'TasksController handling POST /tasks redirects to tasks_url when all required attributes are set' do
@@ -171,8 +199,16 @@ class TasksControllerTest < ActionController::TestCase
   # PUT /tasks/:id/finish
   #
 
-  test 'TasksController PUT /tasks/:id/finish is routed correctly' do
-    assert_routing({ :method => 'put', :path => '/tasks/1/finish' }, { :controller => 'tasks', :action => 'finish', :id => '1' })
+  test "{ :controller => 'tasks', :action => 'finish', :id => '1' } is routed correctly" do
+    assert_routing({ :path => '/tasks/1/finish', :method => 'put' }, { :controller => 'tasks', :action => 'finish', :id => '1' })
+  end
+
+  test "PUT 'tasks/1/finish' is recognized correctly" do
+    assert_recognizes({ :controller => 'tasks', :action => 'finish', :id => '1' }, { :path => 'tasks/1/finish', :method => 'put' })
+  end
+
+  test "finish_task_path generates '/tasks/1/finish'" do
+    assert_equal '/tasks/1/finish', finish_task_path(1)
   end
 
   test 'TasksController handling PUT /tasks/:id/finish redirects to tasks_url' do
