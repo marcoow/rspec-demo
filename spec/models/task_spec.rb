@@ -32,4 +32,15 @@ describe Task do
 
   end
 
+  describe '#finish!' do
+
+    it 'should execute update_attributes!(:finished => true)' do
+      task = Task.new
+      task.should_receive(:update_attributes!).once.with(:finished => true)
+
+      task.finish!
+    end
+
+  end
+
 end

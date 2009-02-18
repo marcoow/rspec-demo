@@ -57,58 +57,6 @@ class TasksControllerTest < ActionController::TestCase
   end
 
   #
-  # GET /tasks/:id
-  #
-
-  test "{ :controller => 'tasks', :action => 'index', :id => '1' } is routed correctly" do
-    assert_routing '/tasks/1', { :controller => 'tasks', :action => 'show', :id => '1' }
-  end
-
-  test "GET 'tasks/1' is recognized correctly" do
-    assert_recognizes({ :controller => 'tasks', :action => 'show', :id => '1' }, { :path => 'tasks/1' })
-  end
-
-  test "task_path(1) generates '/tasks/1'" do
-    assert_equal '/tasks/1', task_path(1)
-  end
-
-  test 'TasksController handling GET /tasks/:id is a success' do
-    get :show, :id => 1
-
-    assert_response :success
-  end
-
-  test 'TasksController handling GET /tasks/:id renders the tasks/show template' do
-    get :show, :id => 1
-
-    assert_template 'tasks/show'
-  end
-
-  test 'TasksController handling GET /tasks/:id assigns the task for the view' do
-    get :show, :id => 1
-
-    assert_equal tasks(:one), assigns(:task)
-  end
-
-  test "TasksController handling GET /tasks/:id renders the task's title" do
-    get :show, :id => 1
-
-    assert_select 'h1', Regexp.compile(tasks(:one).title)
-  end
-
-  test "TasksController handling GET /tasks/:id renders a link to edit the task" do
-    get :show, :id => 1
-
-    assert_select "a[href=?]", finish_task_path(tasks(:one))
-  end
-
-  test 'TasksController handling GET /tasks/:id renders a link to tasks' do
-    get :show, :id => 1
-
-    assert_select 'a[href=?]', tasks_path
-  end
-
-  #
   # GET /tasks/new
   #
 
@@ -153,7 +101,7 @@ class TasksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'TasksController handling GET /tasks/new renders a link to tasks' do
+  test 'TasksController handling GET /tasks/new renders a link to tasks_path' do
     get :show, :id => 1
 
     assert_select 'a[href=?]', tasks_path
@@ -193,6 +141,58 @@ class TasksControllerTest < ActionController::TestCase
     assert_difference('Task.count') do
       post :create, :task => { :title => 'title'}
     end
+  end
+
+  #
+  # GET /tasks/:id
+  #
+
+  test "{ :controller => 'tasks', :action => 'index', :id => '1' } is routed correctly" do
+    assert_routing '/tasks/1', { :controller => 'tasks', :action => 'show', :id => '1' }
+  end
+
+  test "GET 'tasks/1' is recognized correctly" do
+    assert_recognizes({ :controller => 'tasks', :action => 'show', :id => '1' }, { :path => 'tasks/1' })
+  end
+
+  test "task_path(1) generates '/tasks/1'" do
+    assert_equal '/tasks/1', task_path(1)
+  end
+
+  test 'TasksController handling GET /tasks/:id is a success' do
+    get :show, :id => 1
+
+    assert_response :success
+  end
+
+  test 'TasksController handling GET /tasks/:id renders the tasks/show template' do
+    get :show, :id => 1
+
+    assert_template 'tasks/show'
+  end
+
+  test 'TasksController handling GET /tasks/:id assigns the task for the view' do
+    get :show, :id => 1
+
+    assert_equal tasks(:one), assigns(:task)
+  end
+
+  test "TasksController handling GET /tasks/:id renders the task's title" do
+    get :show, :id => 1
+
+    assert_select 'h1', Regexp.compile(tasks(:one).title)
+  end
+
+  test "TasksController handling GET /tasks/:id renders a link to finish the task" do
+    get :show, :id => 1
+
+    assert_select "a[href=?]", finish_task_path(tasks(:one))
+  end
+
+  test 'TasksController handling GET /tasks/:id renders a link to tasks_path' do
+    get :show, :id => 1
+
+    assert_select 'a[href=?]', tasks_path
   end
 
   #
