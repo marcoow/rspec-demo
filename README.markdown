@@ -61,4 +61,4 @@ See <code>test</code>, <code>spec</code> and <code>features</code> directories f
 
 ## Author
 
-Copyright (c) 2008 Marco Otte-Witte (http://simplabs.com), released under the MIT license
+Copyright (c) 2008 Marco Otte-Witte ([http://simplabs.com](http://simplabs.com)), released under the MIT license
