@@ -180,7 +180,7 @@ class TasksControllerTest < ActionController::TestCase
   test "TasksController handling GET /tasks/:id renders the task's title" do
     get :show, :id => 1
 
-    assert_select 'h1', Regexp.compile(tasks(:one).title)
+    assert_select 'h1', /#{tasks(:one).title}/m
   end
 
   test "TasksController handling GET /tasks/:id renders a link to finish the task" do

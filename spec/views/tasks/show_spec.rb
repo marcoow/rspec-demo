@@ -10,7 +10,7 @@ describe 'tasks/index' do
   it "should render the task's title" do
     do_render
 
-    response.should have_tag('h1', Regexp.compile(@task.title))
+    response.should have_tag('h1', /#{@task.title}/m)
   end
 
   it 'should render a link to finish the task' do
