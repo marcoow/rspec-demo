@@ -8,56 +8,56 @@ See <code>test</code>, <code>spec</code> and <code>features</code> directories f
 
 * Run unit tests:
 
-	rake test:units
+    rake test:units
 
 * Run functional tests:
 
-	rake test:functionals
+    rake test:functionals
 
 * Run integration tests:
 
-	rake test:integration
+    rake test:integration
 
 * Run all of the above:
 
-	rake test
+    rake test
 
 ### RSpec
 
 * Run model specs:
 
-	rake spec:models
+    rake spec:models
 
 * Run controller specs:
 
-	rake spec:controllers
+    rake spec:controllers
 
 * Run view specs:
 
-	rake spec:views
+    rake spec:views
 
 * Run all of the above:
 
-	rake spec
+    rake spec
 
 * Run code coverage analysis on specs:
 
-	rake spec:rcov
+    rake spec:rcov
 
 ### Cucumber
 
 * Run features:
 
-	rake features
+    rake features
 
 
 ## What you need
 
-	sudo gem install rspec
-	sudo gem install rspec-rails
-	sudo gem install cucumber
-	sudo gem install webrat
-	sudo gem install rcov
+    sudo gem install rspec
+    sudo gem install rspec-rails
+    sudo gem install cucumber
+    sudo gem install webrat
+    sudo gem install rcov
 
 ## Author
 
