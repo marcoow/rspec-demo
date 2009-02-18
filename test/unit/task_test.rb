@@ -26,4 +26,11 @@ class TaskTest < ActiveSupport::TestCase
     assert !task.valid?
   end
 
+  test 'Task#finish! should execute update_attributes!(:finished => true)' do
+    task = Task.new
+    task.expects(:update_attributes!).with(:finished => true).once
+
+    task.finish!
+  end
+
 end

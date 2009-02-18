@@ -15,14 +15,14 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(params[:task])
     render :action => :new and return unless @task.save
-    flash[:message] = 'Task created!'
+    flash[:notice] = 'Task created!'
     redirect_to tasks_url
   end
 
   def finish
     task = Task.find(params[:id])
-    task.update_attribute(:finished, true)
-    flash[:message] = 'Task finished!'
+    task.finish!
+    flash[:notice] = 'Task finished!'
     redirect_to tasks_url
   end
 

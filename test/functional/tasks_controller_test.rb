@@ -149,10 +149,10 @@ class TasksControllerTest < ActionController::TestCase
     assert_redirected_to tasks_url
   end
 
-  test 'TasksController handling POST /tasks sets a flash message when all required attributes are set' do
+  test 'TasksController handling POST /tasks sets a flash notice when all required attributes are set' do
     post :create, :task => { :title => 'title' }
 
-    assert_not_nil flash[:message]
+    assert_not_nil flash[:notice]
   end
 
   test 'TasksController handling POST /tasks renders template tasks/new when not all required attributes are set' do
@@ -181,10 +181,14 @@ class TasksControllerTest < ActionController::TestCase
     assert_redirected_to tasks_url
   end
 
-  test 'TasksController handling PUT /tasks/:id/finish sets a flash message' do
+  test 'TasksController handling PUT /tasks/:id/finish sets a flash notice' do
     put :finish, :id => 1
 
-    assert_not_nil flash[:message]
+    assert_not_nil flash[:notice]
+  end
+
+  def teardown
+    Task.destroy_all
   end
 
 end
