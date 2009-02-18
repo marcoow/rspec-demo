@@ -2,6 +2,8 @@
 
 See <code>test</code>, <code>spec</code> and <code>features</code> directories for samples and comparison of **Test::Unit**, **RSpec** and **Cucumber**.
 
+The application itself is pretty trivial and only has a <code>Task</code> model with a <code>title</code> and a <code>finished</code> flag. The controller allows to view, add and finish tasks. Deletion and editing of tasks is not implemented.
+
 ## Relevant rake tasks
 
 ### Test::Unit
