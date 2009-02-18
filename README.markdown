@@ -6,47 +6,47 @@ See <code>test</code>, <code>spec</code> and <code>features</code> directories f
 
 ### Test::Unit
 
-*Run unit tests:*
+**Run unit tests:**
 
     rake test:units
 
-*Run functional tests:*
+**Run functional tests:**
 
     rake test:functionals
 
-*Run integration tests:*
+**Run integration tests:**
 
     rake test:integration
 
-*Run all of the above:*
+**Run all of the above:**
 
     rake test
 
 ### RSpec
 
-*Run model specs:*
+**Run model specs:**
 
     rake spec:models
 
-*Run controller specs:*
+**Run controller specs:**
 
     rake spec:controllers
 
-*Run view specs:*
+**Run view specs:**
 
     rake spec:views
 
-*Run all of the above:*
+**Run all of the above:**
 
     rake spec
 
-*Run code coverage analysis on specs:*
+**Run code coverage analysis on specs:**
 
     rake spec:rcov
 
 ### Cucumber
 
-*Run features:*
+**Run features:**
 
     rake features
 
