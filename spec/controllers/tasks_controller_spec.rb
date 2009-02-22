@@ -4,11 +4,7 @@ describe TasksController do
 
   describe 'handling GET /tasks' do
 
-    it 'should be a success' do
-      do_request
-
-      response.should be_success
-    end
+    it_should_behave_like 'all non-redirecting actions'
 
     it "should render the 'tasks/index' template" do
       do_request
@@ -36,11 +32,7 @@ describe TasksController do
 
   describe 'handling GET /tasks/new' do
 
-    it 'should be a success' do
-      do_request
-
-      response.should be_success
-    end
+    it_should_behave_like 'all non-redirecting actions'
 
     it "should render the 'tasks/new' template" do
       do_request
@@ -138,11 +130,7 @@ describe TasksController do
       Task.stub!(:find).and_return(stub_model(Task))
     end
 
-    it 'should be a success' do
-      do_request
-
-      response.should be_success
-    end
+    it_should_behave_like 'all non-redirecting actions'
 
     it "should render the 'tasks/show' template" do
       do_request
