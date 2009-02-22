@@ -13,9 +13,7 @@ describe Task do
     end
 
     it 'should not succeed when no title is set' do
-      @task.title = nil
-
-      @task.should_not be_valid
+      @task.should require_attribute(:title)
     end
 
     it 'should not succeed when a title with less than 5 characters is set' do
