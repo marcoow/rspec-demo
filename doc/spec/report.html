@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>RSpec results</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <style type="text/css">
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 80%;
+  }
+  </style>
+  <script type="text/javascript">
+    // <![CDATA[
+function moveProgressBar(percentDone) {
+  document.getElementById("rspec-header").style.width = percentDone +"%";
+}
+function makeRed(element_id) {
+  document.getElementById(element_id).style.background = '#C40D0D';
+  document.getElementById(element_id).style.color = '#FFFFFF';
+}
+
+function makeYellow(element_id) {
+  if (element_id == "rspec-header" && document.getElementById(element_id).style.background != '#C40D0D')
+  {
+    document.getElementById(element_id).style.background = '#FAF834';
+    document.getElementById(element_id).style.color = '#000000';
+  }
+  else
+  {
+    document.getElementById(element_id).style.background = '#FAF834';
+    document.getElementById(element_id).style.color = '#000000';
+  }
+}
+
+    // ]]>
+  </script>
+  <style type="text/css">
+#rspec-header {
+  background: #65C400; color: #fff; height: 4em;
+}
+
+.rspec-report h1 {
+  margin: 0px 10px 0px 10px;
+  padding: 10px;
+  font-family: "Lucida Grande", Helvetica, sans-serif;
+  font-size: 1.8em;
+  position: absolute;
+}
+
+#summary {
+  margin: 0; padding: 5px 10px;
+  font-family: "Lucida Grande", Helvetica, sans-serif;
+  text-align: right;
+  top: 0px;
+  right: 0px;
+  float:right;
+}
+
+#summary p {
+  margin: 0 0 0 2px;
+}
+
+#summary #totals {
+  font-size: 1.2em;
+}
+
+.example_group {
+  margin: 0 10px 5px;
+  background: #fff;
+}
+
+dl {
+  margin: 0; padding: 0 0 5px;
+  font: normal 11px "Lucida Grande", Helvetica, sans-serif;
+}
+
+dt {
+  padding: 3px;
+  background: #65C400;
+  color: #fff;
+  font-weight: bold;
+}
+
+dd {
+  margin: 5px 0 5px 5px;
+  padding: 3px 3px 3px 18px;
+}
+
+dd.spec.passed {
+  border-left: 5px solid #65C400;
+  border-bottom: 1px solid #65C400;
+  background: #DBFFB4; color: #3D7700;
+}
+
+dd.spec.failed {
+  border-left: 5px solid #C20000;
+  border-bottom: 1px solid #C20000;
+  color: #C20000; background: #FFFBD3;
+}
+
+dd.spec.not_implemented {
+  border-left: 5px solid #FAF834;
+  border-bottom: 1px solid #FAF834;
+  background: #FCFB98; color: #131313;
+}
+
+dd.spec.pending_fixed {
+  border-left: 5px solid #0000C2;
+  border-bottom: 1px solid #0000C2;
+  color: #0000C2; background: #D3FBFF;
+}
+
+.backtrace {
+  color: #000;
+  font-size: 12px;
+}
+
+a {
+  color: #BE5C00;
+}
+
+/* Ruby code, style similar to vibrant ink */
+.ruby {
+  font-size: 12px;
+  font-family: monospace;
+  color: white;
+  background-color: black;
+  padding: 0.1em 0 0.2em 0;
+}
+
+.ruby .keyword { color: #FF6600; }
+.ruby .constant { color: #339999; }
+.ruby .attribute { color: white; }
+.ruby .global { color: white; }
+.ruby .module { color: white; }
+.ruby .class { color: white; }
+.ruby .string { color: #66FF00; }
+.ruby .ident { color: white; }
+.ruby .method { color: #FFCC00; }
+.ruby .number { color: white; }
+.ruby .char { color: white; }
+.ruby .comment { color: #9933CC; }
+.ruby .symbol { color: white; }
+.ruby .regex { color: #44B4CC; }
+.ruby .punct { color: white; }
+.ruby .escape { color: white; }
+.ruby .interp { color: white; }
+.ruby .expr { color: white; }
+
+.ruby .offending { background-color: gray; }
+.ruby .linenum {
+  width: 75px;
+  padding: 0.1em 1em 0.2em 0;
+  color: #000000;
+  background-color: #FFFBD3;
+}
+
+  </style>
+</head>
+<body>
+<div class="rspec-report">
+
+<div id="rspec-header">
+  <div id="label">
+    <h1>RSpec Results</h1>
+  </div>
+
+  <div id="summary">
+    <p id="totals">&nbsp;</p>
+    <p id="duration">&nbsp;</p>
+  </div>
+</div>
+
+<div class="results">
+<div class="example_group">
+  <dl>
+  <dt id="example_group_1">tasks/index</dt>
+    <script type="text/javascript">moveProgressBar('2.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render a list of tasks</span></dd>
+    <script type="text/javascript">moveProgressBar('4.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render links to the tasks</span></dd>
+    <script type="text/javascript">moveProgressBar('6.1');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render a link to tasks/new</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_2">tasks/new</dt>
+    <script type="text/javascript">moveProgressBar('8.1');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render a form for the task</span></dd>
+    <script type="text/javascript">moveProgressBar('10.2');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render a link to tasks_path</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_3">tasks/index</dt>
+    <script type="text/javascript">moveProgressBar('12.2');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render the task's title</span></dd>
+    <script type="text/javascript">moveProgressBar('14.2');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render a link to finish the task</span></dd>
+    <script type="text/javascript">moveProgressBar('16.3');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render a link to tasks_path</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_4">TasksController routing helpers</dt>
+    <script type="text/javascript">moveProgressBar('18.3');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should generate /tasks for tasks_path</span></dd>
+    <script type="text/javascript">moveProgressBar('20.4');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should generate /tasks/new for new_task_path</span></dd>
+    <script type="text/javascript">moveProgressBar('22.4');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should generate /tasks/1 for task_path(1)</span></dd>
+    <script type="text/javascript">moveProgressBar('24.4');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should generate /tasks/1/finish for finish_task_path(1)</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_5">TasksController route recognition</dt>
+    <script type="text/javascript">moveProgressBar('26.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route GET /tasks to { :controller =&gt; 'tasks', :action =&gt; 'index' }</span></dd>
+    <script type="text/javascript">moveProgressBar('28.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route GET /tasks/new to { :controller =&gt; 'tasks', :action =&gt; 'new' }</span></dd>
+    <script type="text/javascript">moveProgressBar('30.6');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route POST /tasks to { :controller =&gt; 'tasks', :action =&gt; 'create' }</span></dd>
+    <script type="text/javascript">moveProgressBar('32.6');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route GET /tasks/1 to { :controller =&gt; 'tasks', :action =&gt; 'show', :id =&gt; '1' }</span></dd>
+    <script type="text/javascript">moveProgressBar('34.6');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route PUT /tasks/1/finish to { :controller =&gt; 'tasks', :action =&gt; 'finish', :id =&gt; '1' }</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_6">TasksController route generation</dt>
+    <script type="text/javascript">moveProgressBar('36.7');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route { :controller =&gt; 'tasks', :action =&gt; 'index' } to /tasks</span></dd>
+    <script type="text/javascript">moveProgressBar('38.7');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route { :controller =&gt; 'tasks', :action =&gt; 'new' } to /tasks/new</span></dd>
+    <script type="text/javascript">moveProgressBar('40.8');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route { :controller =&gt; 'tasks', :action =&gt; 'create' } to { :path =&gt; '/tasks', :method =&gt; :post }</span></dd>
+    <script type="text/javascript">moveProgressBar('42.8');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route { :controller =&gt; 'tasks', :action =&gt; 'show', :id =&gt; '1' } to /tasks/1</span></dd>
+    <script type="text/javascript">moveProgressBar('44.8');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should route { :controller =&gt; 'tasks', :action =&gt; 'finish', :id =&gt; '1' } to { :path =&gt; '/tasks/1/finish', :method =&gt; :put }</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_7">TasksController handling PUT /tasks/:id/finish</dt>
+    <script type="text/javascript">moveProgressBar('46.9');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should load the task</span></dd>
+    <script type="text/javascript">moveProgressBar('48.9');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should finish the task</span></dd>
+    <script type="text/javascript">moveProgressBar('51.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should recirect to tasks_url</span></dd>
+    <script type="text/javascript">moveProgressBar('53.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should set a flash notice</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_8">TasksController handling GET /tasks/:id</dt>
+    <script type="text/javascript">moveProgressBar('55.1');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should be a success</span></dd>
+    <script type="text/javascript">moveProgressBar('57.1');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render the 'tasks/show' template</span></dd>
+    <script type="text/javascript">moveProgressBar('59.1');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should load the task</span></dd>
+    <script type="text/javascript">moveProgressBar('61.2');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should assign the task for the view</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_9">TasksController handling POST /tasks when the task can not be saved</dt>
+    <script type="text/javascript">moveProgressBar('63.2');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render the 'tasks/new' template</span></dd>
+    <script type="text/javascript">moveProgressBar('65.3');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should not set a flash notice</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_10">TasksController handling POST /tasks when the task can be saved</dt>
+    <script type="text/javascript">moveProgressBar('67.3');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should recirect to tasks_url</span></dd>
+    <script type="text/javascript">moveProgressBar('69.3');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should set a flash notice</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_11">TasksController handling POST /tasks</dt>
+    <script type="text/javascript">moveProgressBar('71.4');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should instantiate a new tasks with the specified parameters</span></dd>
+    <script type="text/javascript">moveProgressBar('73.4');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should save the new task</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_12">TasksController handling GET /tasks/new</dt>
+    <script type="text/javascript">moveProgressBar('75.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should be a success</span></dd>
+    <script type="text/javascript">moveProgressBar('77.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render the 'tasks/new' template</span></dd>
+    <script type="text/javascript">moveProgressBar('79.5');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should instantiate a new tasks</span></dd>
+    <script type="text/javascript">moveProgressBar('81.6');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should assign the task for the view</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_13">TasksController handling GET /tasks</dt>
+    <script type="text/javascript">moveProgressBar('83.6');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should be a success</span></dd>
+    <script type="text/javascript">moveProgressBar('85.7');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should render the 'tasks/index' template</span></dd>
+    <script type="text/javascript">moveProgressBar('87.7');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should load all unfinished tasks</span></dd>
+    <script type="text/javascript">moveProgressBar('89.7');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should assign the tasks for the view</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_14">Task finishing</dt>
+    <script type="text/javascript">moveProgressBar('91.8');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should set the task's finished attribute to true</span></dd>
+  </dl>
+</div>
+<div class="example_group">
+  <dl>
+  <dt id="example_group_15">Task validation</dt>
+    <script type="text/javascript">moveProgressBar('93.8');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should succeed when all required attributres are set</span></dd>
+    <script type="text/javascript">moveProgressBar('95.9');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should not succeed when no title is set</span></dd>
+    <script type="text/javascript">moveProgressBar('97.9');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should not succeed when a title with less than 5 characters is set</span></dd>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="spec passed"><span class="passed_spec_name">should not succeed when a title with more than 5 characters is set</span></dd>
+  </dl>
+</div>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.553206 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "49 examples, 0 failures";</script>
+</div>
+</div>
+</body>
+</html>

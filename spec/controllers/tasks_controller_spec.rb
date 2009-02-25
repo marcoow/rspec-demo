@@ -4,6 +4,11 @@ describe TasksController do
 
   describe 'handling GET /tasks' do
 
+    before do
+      @task = stub_model(Task)
+      Task.stub!(:find).and_return(@task)
+    end
+
     it_should_behave_like 'all non-redirecting actions'
 
     it "should render the 'tasks/index' template" do
@@ -21,7 +26,7 @@ describe TasksController do
     it 'should assign the tasks for the view' do
       do_request
 
-      assigns[:tasks].should_not be_nil
+      assigns[:tasks].should == @task
     end
 
     def do_request
@@ -49,7 +54,8 @@ describe TasksController do
     it 'should assign the task for the view' do
       do_request
 
-      assigns[:task].should_not be_nil
+      assigns[:task].should be_instance_of(Task)
+      assigns[:task].should be_new_record
     end
 
     def do_request
@@ -127,7 +133,8 @@ describe TasksController do
   describe 'handling GET /tasks/:id' do
 
     before do
-      Task.stub!(:find).and_return(stub_model(Task))
+      @task = stub_model(Task)
+      Task.stub!(:find).and_return(@task)
     end
 
     it_should_behave_like 'all non-redirecting actions'
@@ -147,7 +154,7 @@ describe TasksController do
     it 'should assign the task for the view' do
       do_request
 
-      assigns[:task].should_not be_nil
+      assigns[:task].should == @task
     end
 
     def do_request
