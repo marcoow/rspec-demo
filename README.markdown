@@ -24,6 +24,10 @@ The application itself is pretty trivial and only has a <code>Task</code> model 
 
     rake test
 
+**Autotest:**
+
+    autotest
+
 ### RSpec
 
 **Run model specs:**
@@ -45,6 +49,14 @@ The application itself is pretty trivial and only has a <code>Task</code> model 
 **Run code coverage analysis on specs:**
 
     rake spec:rcov
+
+**Autospec:**
+
+    ./script/autospec
+
+**Autospec with Cucumber features:**
+
+    AUTOFEATURE=true ./script/autospec
 
 ### Cucumber
 
